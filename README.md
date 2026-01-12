@@ -2,6 +2,9 @@
 
 This project simulates an MTR PA (Passenger Annoucement) Page for the SP1900 model. The simulation includes a webpage interface with a navigation bar and a panel for displaying content. Currently, the project supports 5 PA (Public Address) systems, but the navigation bar buttons are non-functional.
 
+#Screenshot
+![screenshot](screenshot.png)
+
 ## Project Structure
 
 The project is organized as follows:
