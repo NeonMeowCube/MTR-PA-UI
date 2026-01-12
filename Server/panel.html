@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<!-- define utf-8-->
+    <head>
+        <!-- MTR panel resolution ratio 800*600-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cabin Panel</title>
+        <script src="index.js" defer></script>
+        <!-- link css-->
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="sound.js"></script>
+    </head>
+    <body>
+        <div class="MTR-Cabin-Panel">
+            <div class="info-section">
+                <div style="margin-right: 2.5vw;"></div>
+                <div id="block-0">
+                    <table>
+                        <tr>
+                            <image src="Media/images/MTR-LOGO.png" alt="MTR Logo" class="logo" style="height: 11vh;margin-top: 0.5vh;"></image>
+                        </tr>
+                    </table>
+                </div>
+                <div style="margin-right: 2.5vw;"></div>
+                <div id="block-1">
+                    <table>
+                        <tr>
+                            <th><h1>特別信息</h1></th>
+                        </tr>
+                        <tr>
+                            <th style="display: flex;background-color: #81d9d5;outline: 3px solid #5990aa;padding: 4px;"><p>職員編號:</p><p style="font-weight: bold;">00000</p></th>
+                        </tr>
+                    </table>
+                </div>
+                <div style="margin-right: 1.2vw;"></div>
+                <div id="block-2">
+                    <table style="display: flex; background-color: #81d9d5;outline: 3px solid #5990aa;padding: 4px;padding-bottom: 0px;padding-left: 0px;">
+                        <tr>
+                            <th><h1>車速</h1></th>
+                        </tr>
+                        <tr>
+                            <th style="display: flex;"><p id="speed" style="font-size: 7vh;width: 8vw;text-align: center;">0</p><p style="text-align: right;margin: 0;vertical-align: bottom;padding-top: 4vh;">km/h</p></th>
+                        </tr>
+                    </table>
+                </div>
+                <div style="margin-right: 1vw;"></div>
+                <div id="block-3">
+                    <table style="background-color: #81d9d5; outline: 3px solid #5990aa; padding: 4px; width: 24vw; border-collapse: collapse;line-height: 120%; height: 11vh;font-size: 2.5vh;">
+                        <tr style="border-bottom: 2px solid #5990aa;">
+                        <td style="width: 6vw;">車序:</td>
+                        <td style="width: 15vw; text-align: center;" id="train_no">99</td>
+                        </tr>
+                        <tr style="border-bottom: 2px solid #5990aa;">
+                        <td>往:</td>
+                        <td id="Next-Station">屯門</td>
+                        </tr>
+                        <tr>
+                        <td>終點:</td>
+                        <td id="Destination">烏溪沙</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="margin-right: 1vw;"></div>
+                <div id="block-4">
+                    <table style="background-color: #81d9d5; outline: 3px solid #5990aa; padding: 4px;height: 10.5vh; width: 15vw;">
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><p id="Date">27/11/23</p></td> <!--DDMMYY-->
+                        </tr>
+                        <tr>
+                            <td><p id="Time">16:24:07</p></td> <!--HHMMSS-->
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="pa-section" style="background-color: transparent;display: flex;">
+                <div class="left-hand-side">
+                <div id="pa-buttons">
+                    <table style="margin-left: 2vw;">
+                        <div style="margin-top: 6vh;"></div>
+                        <tr>
+                            <td class="pa-no"><p>01</p></td><td><button onclick="playSound('01')">Hold</button></td><td class="pa-description"><p>hold handrail</p></td>
+                        </tr>
+                        <tr>
+                            <td class="pa-no"><p>02</p></td><td><button onclick="playSound('02')">Open left</button></td><td class="pa-description"><p>open left door</p></td>
+                        </tr>
+                        <tr>
+                            <td class="pa-no"><p>03</p></td><td><button onclick="playSound('03')">Open right</button></td><td class="pa-description"><p>open right door</p></td>
+                        </tr>
+                        <tr>
+                            <td class="pa-no"><p>04</p></td><td><button onclick="playSound('04')">Move in</button></td><td class="pa-description"><p>move inside compartment</p></td>
+                        </tr>
+                        <tr>
+                            <td class="pa-no"><p>05</p></td><td><button onclick="playSound('05')">No Eating</button></td><td class="pa-description"><p>no eating on train</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-number" style="display: flex;font-size: 3vw;margin-left: 70.5vw;margin-top: 1vh">
+                    <p style="color: #556584;">頁</p><div style="margin-right: 2vw;"></div><p id="page-number">1</p><p>/13</p>
+                </div>
+                <div class="information" style="margin-left: 3.5vw;margin-top: 0.5vh;">
+                    <p style="font-size: 2.5vw;color: #305452;font-weight: bold;">接清訊息</p>
+                    <div style="display: flex;font-size: 5vh;">
+                        <input type="text" style="height: 6vh;outline:3px solid black;width: 2.5vw;margin-top: 1.1vh;"></input>
+                        <input type="text" style="height: 6vh;outline:3px solid black;width: 13vw;margin-left:1.5vw;margin-top: 1.1vh;"></input>
+                    </div>
+                </div>
+                </div>
+                <div class="right-hand-side" style="margin-left: 6.2vw;margin-top: 34vh;">
+                    <button type="button" style="width: 12vw; height: 10vh;text-align: center;background-color: #c4702d;"><img src="./Media/images/arrow_drop_down_500dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="Drop Down" style="width: 10vw;margin-top: -2vh;"></button>
+                    <button type="button" style="width: 12vw; height: 10vh;text-align: center;background-color: #c4702d;"><img src="./Media/images/keyboard_double_arrow_down_500dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" alt="Drop Down" style="width: 10vw;margin-top: -2vh;"></button>
+                    <div style="margin-top: 8vh;"></div>
+                    <button type="button" style="width: 13vw; height: 10vh;text-align: center;margin-left: -1vw;color:#f8e472;"><p style="font-size: vw;transform: scaleY(1.5);">顯示</p></button>
+                </div>
+            </div>
+            <div class="navigation-section" style="background-color: transparent;margin:0vh;margin-top:1.5vh;display:flex; flex-wrap:nowrap;background-color: black;">
+                <button type="button" style="height: 11.5vh;text-align: center;color: white;font-size: 2.5vw;">乘客<br>資訊</button>
+                <button type="button" style="height: 11.5vh;text-align: center;color: white;font-size: 2.5vw;">車序<br>終站</button>
+                <button type="button" style="height: 11.5vh;text-align: center;color: white;font-size: 2.5vw;">資訊<br>系統</button>
+                <button type="button" style="height: 11.5vh;text-align: center;color: white;font-size: 2.5vw;">緊急<br>訊息</button>
+                <button type="button" style="height: 11.5vh;text-align: center;color: white;font-size: 2.5vw;">特別<br>資訊</button>
+                <button type="button" style="height: 11.5vh;text-align: center;color: white;font-size: 2.5vw;"><img src="./Media/images/arrow_upward_500dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png" style="height: 8vh;"></button>
+                <div style="margin-left: 35vw;"></div>
+                <button type="button" style="height: 11.5vh;text-align: center;color: white;font-size: 2.5vw;vertical-align: center;background-color: red;">故障</button>
+            </div>
+        </div>
+    </body>
+</html>
